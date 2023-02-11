@@ -1,0 +1,9 @@
+/home/sean/Qt/Examples/Qt-6.4.2/widgets/widgets/build-calculator-Desktop-Release/CMakeFiles/calculator.dir
+/home/sean/Qt/Examples/Qt-6.4.2/widgets/widgets/build-calculator-Desktop-Release/CMakeFiles/edit_cache.dir
+/home/sean/Qt/Examples/Qt-6.4.2/widgets/widgets/build-calculator-Desktop-Release/CMakeFiles/rebuild_cache.dir
+/home/sean/Qt/Examples/Qt-6.4.2/widgets/widgets/build-calculator-Desktop-Release/CMakeFiles/list_install_components.dir
+/home/sean/Qt/Examples/Qt-6.4.2/widgets/widgets/build-calculator-Desktop-Release/CMakeFiles/install.dir
+/home/sean/Qt/Examples/Qt-6.4.2/widgets/widgets/build-calculator-Desktop-Release/CMakeFiles/install/local.dir
+/home/sean/Qt/Examples/Qt-6.4.2/widgets/widgets/build-calculator-Desktop-Release/CMakeFiles/install/strip.dir
+/home/sean/Qt/Examples/Qt-6.4.2/widgets/widgets/build-calculator-Desktop-Release/CMakeFiles/calculator_autogen_timestamp_deps.dir
+/home/sean/Qt/Examples/Qt-6.4.2/widgets/widgets/build-calculator-Desktop-Release/CMakeFiles/calculator_autogen.dir

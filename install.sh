@@ -7,12 +7,14 @@ fi
 
 SCRIPT_LOCATION=$(cd -- "$( dirname -- "./$BASH_SOURCE[0]" )" &> /dev/null && pwd)
 
+chmod a+x "$SCRIPT_LOCATION/calculator"
+
 FILE="/home/$SUDO_USER/Desktop/aros-calculator.desktop"
 if [ -f $FILE ]; then
     rm $FILE
-    touch $FILE
+    sudo -u $SUDO_USER touch $FILE
 else 
-    touch $FILE
+    sudo -u $SUDO_USER touch $FILE
 fi
 
 printf "

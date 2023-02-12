@@ -14,11 +14,12 @@ Calculator::Calculator(QWidget *parent)
     , factorSoFar(0.0), waitingForOperand(true)
 {
 //! [0]
-
+setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(44, 151, 241, 255), stop:1 rgba(98, 64, 232, 255));");
 //! [1]
     display = new QLineEdit("0");
+    display->setStyleSheet("background-color: rgba(0, 0, 0, 0.75); color: white;");
     Button *backspaceButton = createButton(tr("⌫"), SLOT(backspaceClicked()));
-    backspaceButton->setStyleSheet("background-color: #000000; color: white; font-size: 30px; border-radius: 20px;");
+    backspaceButton->setStyleSheet("Button { background-color: rgba(0, 0, 0, 0.75); color: rgb(255, 255, 255); font-size: 30px; border-radius: 20px; } Button:Pressed { color: rgb(255, 255, 255); background-color: rgb(22, 22, 22); font-size: 30px; border-radius: 20px; }");
 //! [1] //! [2]
     display->setReadOnly(true);
     display->setAlignment(Qt::AlignRight);
@@ -34,31 +35,30 @@ Calculator::Calculator(QWidget *parent)
         digitButtons[i] = createButton(QString::number(i), SLOT(digitClicked()));
 
     for (int i = 0; i < NumDigitButtons; ++i)
-        digitButtons[i]->setStyleSheet("background-color: #000000; color: white; font-size: 30px; border-radius: 20px;");
-
+        digitButtons[i]->setStyleSheet("Button { background-color: rgba(0, 0, 0, 0.75); color: rgb(255, 255, 255); font-size: 30px; border-radius: 20px; } Button:Pressed { color: rgb(255, 255, 255); background-color: rgb(22, 22, 22); font-size: 30px; border-radius: 20px; }");
     Button *pointButton = createButton(tr("."), SLOT(pointClicked()));
     Button *changeSignButton = createButton(tr("\302\261"), SLOT(changeSignClicked()));
-    pointButton->setStyleSheet("background-color: #222222; color: white; font-size: 30px; border-radius: 20px;");
-    changeSignButton->setStyleSheet("background-color: #222222; color: white; font-size: 30px; border-radius: 20px;");
+    pointButton->setStyleSheet("Button { background-color: rgba(22, 22, 22, 0.7); color: rgb(255, 255, 255); font-size: 30px; border-radius: 20px; } Button:Pressed { color: rgb(255, 255, 255); background-color: rgb(22, 22, 22); font-size: 30px; border-radius: 20px; }");
+    changeSignButton->setStyleSheet("Button { background-color: rgba(22, 22, 22, 0.7); color: rgb(255, 255, 255); font-size: 30px; border-radius: 20px; } Button:Pressed { color: rgb(255, 255, 255); background-color: rgb(22, 22, 22); font-size: 30px; border-radius: 20px; }");
 
     Button *clearAllButton = createButton(tr("AC"), SLOT(clearAll()));
-    clearAllButton->setStyleSheet("background-color: #222222; color: white; font-size: 30px; border-radius: 20px;");
+    clearAllButton->setStyleSheet("Button { background-color: rgba(22, 22, 22, 0.7); color: rgb(255, 255, 255); font-size: 30px; border-radius: 20px; } Button:Pressed { color: rgb(255, 255, 255); background-color: rgb(22, 22, 22); font-size: 30px; border-radius: 20px; }");
 
     Button *divisionButton = createButton(tr("\303\267"), SLOT(multiplicativeOperatorClicked()));
     Button *timesButton = createButton(tr("\303\227"), SLOT(multiplicativeOperatorClicked()));
     Button *minusButton = createButton(tr("-"), SLOT(additiveOperatorClicked()));
     Button *plusButton = createButton(tr("+"), SLOT(additiveOperatorClicked()));
-    divisionButton->setStyleSheet("background-color: #222222; color: white; font-size: 30px; border-radius: 20px;");
-    timesButton->setStyleSheet("background-color: #222222; color: white; font-size: 30px; border-radius: 20px;");
-    minusButton->setStyleSheet("background-color: #222222; color: white; font-size: 30px; border-radius: 20px;");
-    plusButton->setStyleSheet("background-color: #222222; color: white; font-size: 30px; border-radius: 20px;");
+    divisionButton->setStyleSheet("Button { background-color: rgba(22, 22, 22, 0.7); color: rgb(255, 255, 255); font-size: 30px; border-radius: 20px; } Button:Pressed { color: rgb(255, 255, 255); background-color: rgb(22, 22, 22); font-size: 30px; border-radius: 20px; }");
+    timesButton->setStyleSheet("Button { background-color: rgba(22, 22, 22, 0.7); color: rgb(255, 255, 255); font-size: 30px; border-radius: 20px; } Button:Pressed { color: rgb(255, 255, 255); background-color: rgb(22, 22, 22); font-size: 30px; border-radius: 20px; }");
+    minusButton->setStyleSheet("Button { background-color: rgba(22, 22, 22, 0.7); color: rgb(255, 255, 255); font-size: 30px; border-radius: 20px; } Button:Pressed { color: rgb(255, 255, 255); background-color: rgb(22, 22, 22); font-size: 30px; border-radius: 20px; }");
+    plusButton->setStyleSheet("Button { background-color: rgba(22, 22, 22, 0.7); color: rgb(255, 255, 255); font-size: 30px; border-radius: 20px; } Button:Pressed { color: rgb(255, 255, 255); background-color: rgb(22, 22, 22); font-size: 30px; border-radius: 20px; }");
 
     Button *squareRootButton = createButton(tr("√"), SLOT(unaryOperatorClicked()));
     Button *powerButton = createButton(tr("x\302\262"), SLOT(unaryOperatorClicked()));
     Button *equalButton = createButton(tr("="), SLOT(equalClicked()));
-    squareRootButton->setStyleSheet("background-color: #222222; color: white; font-size: 30px; border-radius: 20px;");
-    powerButton->setStyleSheet("background-color: #222222; color: white; font-size: 30px; border-radius: 20px;");
-    equalButton->setStyleSheet("background-color: #000000; color: white; font-size: 30px; border-radius: 20px;");
+    squareRootButton->setStyleSheet("Button { background-color: rgba(22, 22, 22, 0.7); color: rgb(255, 255, 255); font-size: 30px; border-radius: 20px; } Button:Pressed { color: rgb(255, 255, 255); background-color: rgb(22, 22, 22); font-size: 30px; border-radius: 20px; }");
+    powerButton->setStyleSheet("Button { background-color: rgba(22, 22, 22, 0.7); color: rgb(255, 255, 255); font-size: 30px; border-radius: 20px; } Button:Pressed { color: rgb(255, 255, 255); background-color: rgb(22, 22, 22); font-size: 30px; border-radius: 20px; }");
+    equalButton->setStyleSheet("Button { background-color: rgba(0, 0, 0, 0.75); color: rgb(255, 255, 255); font-size: 30px; border-radius: 20px; } Button:Pressed { color: rgb(255, 255, 255); background-color: rgb(22, 22, 22); font-size: 30px; border-radius: 20px; }");
 
 //! [4]
 //! [5]

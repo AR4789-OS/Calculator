@@ -30,3 +30,19 @@ run it as root by entering the following command:
 ```
 sudo bash install.sh
 ```
+
+# Running
+
+There are 3 ways to run the application.
+
+1. Run the calculator application from the terminal. After installing make sure you are still in the `Calculator` directory and type 
+```
+./calculator
+```
+
+2. Run the calculator application from the applications menu.
+
+3. Run the calculator application by clicking the icon on the dekstop. 
+``
+Note: If it is your first time running the application from the desktop icon, It will appear greyed-out. Before launching you must right-click and select ALLOW LAUNCHING
+``

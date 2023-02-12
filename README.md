@@ -25,8 +25,8 @@ Navigate to the code with:
 cd Calculator
 ```
 
-run it as root by entering the following commands:
+run it as root by entering the following command:
 
 ```
-sudo install.sh
+sudo bash install.sh
 ```

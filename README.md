@@ -1,4 +1,4 @@
-### CALCULATOR
+# CALCULATOR
 ![Calculator Icon](/CalculatorSmall.png)
 
 The calculator for MiracleOS (WIP)
@@ -10,7 +10,7 @@ Ubuntu:
 Fedora:
 `sudo dnf install  qt6-qtbase`
 
-# Build instructions
+## Build instructions
 Extract the zip file:
 `unzip Calculator-dev.zip` 
 

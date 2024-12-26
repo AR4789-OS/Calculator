@@ -4,6 +4,7 @@
 The calculator for MiracleOS (WIP)
 
 Dependencies:
+
 Ubuntu:
 `sudo apt install qt6-core`
 

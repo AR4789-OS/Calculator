@@ -6,10 +6,11 @@ The calculator for MiracleOS (WIP)
 Dependencies:
 Ubuntu:
 `sudo apt install qt6-core`
+
 Fedora:
 `sudo dnf install  qt6-qtbase`
 
-#Build instructions
+# Build instructions
 Extract the zip file:
 `unzip Calculator-dev.zip` 
 Enter the directory:

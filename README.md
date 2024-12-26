@@ -13,11 +13,16 @@ Fedora:
 # Build instructions
 Extract the zip file:
 `unzip Calculator-dev.zip` 
+
 Enter the directory:
 `cd Calculator-dev`
+
 Configure Cmake
 `cmake`
+
 Make the build directory:
 `mkdir build`
+
 Compile with Make
 `make`
+

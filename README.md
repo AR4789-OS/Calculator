@@ -1,10 +1,29 @@
 # CALCULATOR
 ![Calculator Icon](/CalculatorSmall.png)
 
-Calculator will be the default Calculator app for AROS
+The calculator for MiracleOS (WIP)
 
-Like most of the other default applications it is written in C++
+Dependencies:
 
-At the moment it is a very basic calculator,
+Ubuntu:
+`sudo apt install qt6-core`
 
-We will continue to add more to it.
+Fedora:
+`sudo dnf install  qt6-qtbase`
+
+## Build instructions
+Extract the zip file:
+`unzip Calculator-dev.zip` 
+
+Enter the directory:
+`cd Calculator-dev`
+
+Configure Cmake:
+`cmake`
+
+Make the build directory:
+`mkdir build`
+
+Compile with Make:
+`make`
+

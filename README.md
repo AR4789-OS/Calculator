@@ -17,12 +17,12 @@ Extract the zip file:
 Enter the directory:
 `cd Calculator-dev`
 
-Configure Cmake
+Configure Cmake:
 `cmake`
 
 Make the build directory:
 `mkdir build`
 
-Compile with Make
+Compile with Make:
 `make`
 
